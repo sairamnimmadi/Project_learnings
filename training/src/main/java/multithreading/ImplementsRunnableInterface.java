@@ -4,11 +4,11 @@ public class ImplementsRunnableInterface {
 	
 	public static void main(String[] args) {
 		
-		Thread threadthree = new Thread(new ThreadThree());
-		Thread threadfour = new Thread(new ThreadFour());
+		Thread threadone = new Thread(new RunnableInterface());
+		Thread threadtwo = new Thread(new RunnableInterface());
 		
-		threadthree.start();
-		threadfour.start();
+		threadone.start();
+		threadtwo.start();
 		
 	}
 	
