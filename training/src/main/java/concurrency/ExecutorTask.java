@@ -1,8 +1,15 @@
 package concurrency;
 
+import java.text.MessageFormat;
+
 public class ExecutorTask implements Runnable{
+	
+	java.util.logging.Logger logger;
+	
 
 	private String threadNo;
+	
+	
 	
 	public ExecutorTask(String threadNo) {
 		
@@ -12,13 +19,16 @@ public class ExecutorTask implements Runnable{
 	@Override
 	public void run() {
 		
-		System.out.println(Thread.currentThread().getName()+" start execution. Thread No = "+threadNo);
+		MessageFormat.format("{0} start execution. Thread No = {1}", Thread.currentThread().getName() , threadNo);
 		
 		try {
             Thread.sleep(5000); 
-        } catch (InterruptedException e) { }  
+        } catch (InterruptedException e) { 
+        
+        	Thread.currentThread().interrupt();
+        }  
 		
-		System.out.println(Thread.currentThread().getName()+" stop execution."); 
+		MessageFormat.format("{0} stop execution.", Thread.currentThread().getName()); 
 	}
 
 }

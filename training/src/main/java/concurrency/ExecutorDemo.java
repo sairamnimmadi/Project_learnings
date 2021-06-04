@@ -3,7 +3,13 @@ package concurrency;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
 public class ExecutorDemo {
+	
+	private static final Logger LOGGER = LogManager.getLogger(ExecutorDemo.class);
 	
 	public static void main(String[] args) {
 		
@@ -21,6 +27,7 @@ public class ExecutorDemo {
         while (!executorService.isTerminated()) {  
         	
         }  
-        System.out.println("Finished all threads");  
+        LOGGER.info("Finished all threads");
+   
 	}
 }
