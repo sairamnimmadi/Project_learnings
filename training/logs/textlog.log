@@ -1,5 +1,0 @@
-2021-05-25 13:32:08 INFO  LoggerExample: 12 - This is info logger
-2021-05-25 13:32:08 DEBUG LoggerExample: 13 - This is a debug logger
-2021-05-25 13:32:08 WARN  LoggerExample: 14 - This is a warn logger
-2021-05-25 13:32:08 ERROR LoggerExample: 15 - This is a error logger
-2021-05-25 13:32:08 FATAL LoggerExample: 16 - This is a fatal logger

@@ -1,1 +1,0 @@
-In this folder I have written files for comparable and comparator demo codes
